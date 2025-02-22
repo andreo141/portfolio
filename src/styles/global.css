@@ -106,19 +106,17 @@
   color: var(--mtext);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
-.btn-custom:hover {
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active {
   box-shadow: var(--active-shadow);
   transform: translateY(4px);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+a {
+  text-decoration: none;
+  display: inline-block;
 }
