@@ -1,17 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '@/styles/global.css'
-import Marquee from '@/components/ui/marquee'
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
-const items = ["work in progress","🚧","work in progress","🚧","work in progress","🚧","work in progress","🚧","work in progress","🚧" ];
+import '@/styles/global.css';
+import { Text } from "../components/ui/text";
+import { ClientRouter } from 'astro:transitions';
+import Navbar from "../components/ui/navbar.astro"
 
 ---
 
 <Layout>
-	<div class="flex items-center justify-center h-screen">
-	<Marquee items={items} />
-	</div>
+	<ClientRouter />
+	<Navbar />
+	<div id="introduction-wrapper" class="max-w-2xl m-30">
+	<Text as="h1" className="text-4xl font-bold">Andreo Van Onckelen</Text>
+	<Text as="h2" className="text-2xl font-bold mt-5 underline underline-offset-13">Full Stack Developer</Text>
+	<Text className="text-xl font-thin mt-3">
+		You've made it to my profile
+	</Text>
+	<Text className="text-xl font-thin">Welcome to basedworld</Text>
+</div>
 </Layout>

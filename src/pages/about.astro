@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '@/styles/global.css';
+import { Button } from "../components/ui/button";
+import { Text } from "../components/ui/text";
+import { ClientRouter } from 'astro:transitions';
+import Navbar from "../components/ui/navbar.astro"
+
+---
+
+<Layout>
+    <ClientRouter />
+	<Navbar />
+	<div id="about-wrapper" class="max-w-2xl m-30">
+	<Text as="h3" className="text-4xl font-bold">About me</Text>
+	<Text className="text-2xl font-thin mt-5">
+		My name is Andreo and i currently work as a open source consultant at Inuits
+	</Text>
+</div>
+</Layout>
