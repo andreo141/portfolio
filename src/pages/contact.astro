@@ -5,15 +5,15 @@ import { Text } from "../components/ui/text";
 import { ClientRouter } from 'astro:transitions';
 import Navbar from "../components/ui/navbar.astro"
 
+import  ContactForm  from '@/components/ui/contact-form'
+
 ---
 
 <Layout>
 	<ClientRouter />
 	<Navbar />
 	<div id="music-zone-wrapper" class="max-w-2xl m-30">
-		<Text as="h3" className="text-4xl font-bold">Music zone</Text>
-		<Text className="text-2xl font-thin mt-5">
-			Here i will share the music i've been digging throughout the years
-		</Text>
+		<Text as="h3" className="text-4xl font-bold mb-5">Send me a message</Text>
+		<ContactForm></ContactForm>
 </div>
 </Layout>

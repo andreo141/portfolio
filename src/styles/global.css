@@ -109,9 +109,9 @@
   transition: all 0.2s ease-in-out;
 }
 
-.btn-custom:active {
+.btn-custom:hover {
   box-shadow: var(--active-shadow);
-  transform: translateY(2px);
+  transform: translateY(4px);
 }
 
 @layer base {

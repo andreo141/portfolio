@@ -1,8 +1,6 @@
-import { cva } from "class-variance-authority";
-import type { VariantProps } from "class-variance-authority"; // Type-only import
-import React from "react";
-import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
+import React, { type ButtonHTMLAttributes } from "react";
 
 const buttonVariants = cva("font-head transition-all outline-none", {
   variants: {

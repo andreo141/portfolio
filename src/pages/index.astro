@@ -7,8 +7,9 @@ import Navbar from "../components/ui/navbar.astro"
 
 const images = {
   Astro: "/public/images/astro-icon-dark.svg",
-  Ember: "public/images/e-rounded-icon-4c.svg",
-  Javascript: "public/images/logo-javascript.svg",
+  Ember: "/public/images/e-rounded-icon-4c.svg",
+  Javascript: "/public/images/logo-javascript.svg",
+  Typescript: "/public/images/typescript.svg",
   Python: "public/images/python-5.svg"
 };
 ---
@@ -18,7 +19,8 @@ const images = {
 	<Navbar />
 
 	<section id="introduction-section" class="max-w-2xl m-30">
-	<Text as="h1" className="text-4xl font-bold">Andreo Van Onckelen</Text>
+		<Text className="text-xl font-thin ml-1">Hi there! My name is</Text>
+		<Text as="h1" className="text-4xl font-bold mt-5">Andreo Van Onckelen</Text>
 	<Text as="h2" className="text-2xl font-bold mt-5 underline underline-offset-13">Full Stack Developer</Text>
 	<Text className="text-xl font-thin mt-8">
 		You've made it to my profile
@@ -34,7 +36,4 @@ const images = {
 		</div>
 	))}
 </div>
-<a href="https://github.com/andreo141" target="_blank">
-	<img src="/public/images/github-mark.svg" width="44" alt="">
-</a>
 </Layout>
