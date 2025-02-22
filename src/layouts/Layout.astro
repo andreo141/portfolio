@@ -17,25 +17,12 @@
 <style>
   html,
   body {
-    margin: 0;
-    font-family: sans-serif;
-  }
-
-  body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  background-color: var(--bg);
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='100%' height='100%'><defs><pattern id='grid' patternUnits='userSpaceOnUse' width='5' height='5'><circle cx='2' cy='2' r='0.1' fill='black'/></pattern></defs><rect width='100%' height='100%' fill='url(%23grid)' /></svg>");
   background-repeat: repeat;
-  z-index: -1;
-  pointer-events: none;
-  background-color: var(--bg);
-  color: var(--text);
-  box-sizing: border-box;
-
+  background-size: 100px 100px; /* Adjust grid size */
 }
+
+
 
 </style>
