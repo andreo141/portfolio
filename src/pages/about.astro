@@ -6,7 +6,7 @@ import { Text } from "../components/ui/text";
 import { ClientRouter } from 'astro:transitions';
 import Navbar from "../components/ui/navbar.astro"
 import { calculateYearsSinceStarted } from "../utils/calculate-since"
-import  ImageCard  from '../components/ui/image-card';
+import fetchEmployer from '@/utils/fetch-employer'; 
 ---
 
 <Layout>
@@ -15,7 +15,7 @@ import  ImageCard  from '../components/ui/image-card';
 	<div id="about-wrapper" class="max-w-2xl m-30">
 	<Text as="h3" className="text-4xl font-bold">About me</Text>
 	<Text className="text-2xl font-thin mt-5">
-		My name is Andreo and i currently work as a open source consultant at <span class="underline underline-offset-5">Inuits</span>
+		My name is Andreo and i currently work as a open source consultant at <span class="underline underline-offset-5">{fetchEmployer()}</span>
     </Text>
     <Text className="text-2xl font-thin mt-5">
             I started my journey about {calculateYearsSinceStarted(1675238400000)} years ago.
