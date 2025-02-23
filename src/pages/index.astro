@@ -1,36 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '@/styles/global.css';
+import Layout from "../layouts/Layout.astro";
+import "@/styles/global.css";
 import { Text } from "../components/ui/text";
-import { ClientRouter } from 'astro:transitions';
-import Navbar from "../components/ui/navbar.astro"
-
-const images = {
-  Astro: "/public/images/astro-icon-dark.svg",
-  Ember: "/public/images/e-rounded-icon-4c.svg",
-  Javascript: "/public/images/logo-javascript.svg",
-  Typescript: "/public/images/typescript.svg",
-  Python: "public/images/python-5.svg"
-};
+import { ClientRouter } from "astro:transitions";
+import { MarqueeDemo } from "@/components/custom/tech-marquee";
 ---
 
 <Layout>
-	<ClientRouter />
-	<Navbar />
+  <ClientRouter />
+  <section id="introduction-section" class="max-w-2xl m-30">
+    <Text className="text-xl font-thin ml-1">Hi there! My name is</Text>
+    <Text as="h1" className="text-4xl font-bold mt-5">Andreo Van Onckelen</Text>
+    <Text
+      as="h2"
+      className="text-2xl font-bold mt-5 underline underline-offset-13"
+      >Full Stack Developer</Text
+    >
+    <Text className="text-xl font-thin mt-8">Welcome to my portfolio</Text>
+  </section>
 
-	<section id="introduction-section" class="max-w-2xl m-30">
-		<Text className="text-xl font-thin ml-1">Hi there! My name is</Text>
-		<Text as="h1" className="text-4xl font-bold mt-5">Andreo Van Onckelen</Text>
-	<Text as="h2" className="text-2xl font-bold mt-5 underline underline-offset-13">Full Stack Developer</Text>
-	<Text className="text-xl font-thin mt-8">Welcome to my portfolio</Text>
-</section>
-
-<div id="marquee-wrapper" class="flex items-center max-w-2xl m-30">
-	{Object.entries(images).map(([key, value]) => (
-		<div class="flex items-center space-x-3" key={key}>
-			<img src={value} alt={key} class="h-10 w-10" />
-			<Text className="text-lg mr-5">{key}</Text>
-		</div>
-	))}
-</div>
+  <div id="marquee-wrapper" class="flex items-center max-w-2xl m-30">
+    <MarqueeDemo client:load />
+  </div>
 </Layout>

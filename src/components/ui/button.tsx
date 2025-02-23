@@ -36,7 +36,7 @@ export const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       variant = "default",
       ...props
     }: IButtonProps,
-    forwardedRef
+    forwardedRef,
   ) => (
     <button
       ref={forwardedRef}
@@ -45,7 +45,7 @@ export const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
     >
       {children}
     </button>
-  )
+  ),
 );
 
 Button.displayName = "Button";

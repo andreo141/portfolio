@@ -1,23 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '@/styles/global.css';
-import { Button } from "../components/ui/button";
+import Layout from "../layouts/Layout.astro";
+import "@/styles/global.css";
 import { Text } from "../components/ui/text";
-import { ClientRouter } from 'astro:transitions';
-import Navbar from "../components/ui/navbar.astro"
-import { calculateYearsSinceStarted } from "../utils/calculate-since"
+import { ClientRouter } from "astro:transitions";
+import { calculateYearsSinceStarted } from "../utils/calculate-since";
 ---
 
 <Layout>
-    <ClientRouter />
-	<Navbar />
-	<div id="about-wrapper" class="max-w-2xl m-30">
-	<Text as="h3" className="text-4xl font-bold">About me</Text>
-	<Text className="text-2xl font-thin mt-5">
-		My name is Andreo and I currently work as a Open Source Consultant at <span class="underline underline-offset-5">Inuits</span>
+  <ClientRouter />
+  <div id="about-wrapper" class="max-w-2xl m-30">
+    <Text as="h3" className="text-4xl font-bold">About me</Text>
+    <Text className="text-2xl font-thin mt-5">
+      My name is Andreo and I currently work as a Open Source Consultant at <span
+        class="underline underline-offset-5">Inuits</span
+      >
     </Text>
     <Text className="text-2xl font-thin mt-5">
-            I started my journey about {calculateYearsSinceStarted(1675238400000)} years ago.
-        </Text>
-</div>
+      I started my journey about {calculateYearsSinceStarted(1675238400000)} years
+      ago.
+    </Text>
+  </div>
 </Layout>
