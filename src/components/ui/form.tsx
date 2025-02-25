@@ -32,11 +32,18 @@ const FormField = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
+  control,
+  name,
   ...props
 }: ControllerProps<TFieldValues, TName>) => {
+  const { formState } = useFormContext();
+
+  console.log(`Rendering FormField for: ${name}`);
+  console.log("FormState Errors:", formState.errors); // Check if errors exist
+
   return (
-    <FormFieldContext.Provider value={{ name: props.name }}>
-      <Controller {...props} />
+    <FormFieldContext.Provider value={{ name }}>
+      <Controller control={control} name={name} {...props} />
     </FormFieldContext.Provider>
   );
 };
@@ -148,8 +155,8 @@ const FormMessage = React.forwardRef<
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, children, ...props }, ref) => {
   const { error, formMessageId } = useFormField();
+  console.log("Error for field:", error);
   const body = error ? String(error?.message) : children;
-
   if (!body) {
     return null;
   }
