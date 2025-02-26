@@ -4,47 +4,47 @@ import { cn } from "@/lib/utils";
 const technologies = [
   {
     name: "Astro",
-    image: "/public/images/astro-icon-dark.svg",
+    image: "/images/astro-icon-dark.svg",
     site: "https://astro.build/",
   },
   {
     name: "Emberjs",
-    image: "/public/images/e-rounded-icon-4c.svg",
+    image: "/images/e-rounded-icon-4c.svg",
     site: "https://emberjs.com/",
   },
   {
     name: "Javascript",
-    image: "/public/images/logo-javascript.svg",
+    image: "/images/logo-javascript.svg",
     site: "https://262.ecma-international.org/14.0/",
   },
   {
     name: "Typescript",
-    image: "/public/images/typescript.svg",
+    image: "/images/typescript.svg",
     site: "https://www.typescriptlang.org/",
   },
   {
     name: "Python",
-    image: "/public/images/python-5.svg",
+    image: "/images/python-5.svg",
     site: "https://www.python.org/",
   },
   {
     name: "SPARQL",
-    image: "/public/images/sparql.svg",
+    image: "/images/sparql.svg",
     site: "https://www.w3.org/TR/sparql11-query/",
   },
   {
     name: "Docker",
-    image: "/public/images/docker.svg",
+    image: "/images/docker.svg",
     site: "https://www.docker.com/",
   },
   {
     name: "Git",
-    image: "/public/images/git.svg",
+    image: "/images/git.svg",
     site: "https://git-scm.com/",
   },
   {
     name: "Arduino",
-    image: "/public/images/arduino.svg",
+    image: "/images/arduino.svg",
     site: "https://www.arduino.cc/",
   },
 ];

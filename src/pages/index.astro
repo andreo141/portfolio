@@ -8,8 +8,11 @@ import { MarqueeDemo } from "@/components/custom/tech-marquee";
 
 <Layout>
   <ClientRouter />
-  <div id="sections-wrapper" class="flex">
-    <section id="introduction-section" class="max-w-2xl ml-30 mt-30">
+  <div
+    id="sections-wrapper"
+    class="flex items-center justify-around mt-45 ml-21 mr-21"
+  >
+    <section id="introduction-section">
       <Text className="text-xl font-thin ml-1">Hi there! My name is</Text>
       <Text as="h1" className="text-4xl font-bold mt-5"
         >Andreo Van Onckelen</Text
@@ -22,10 +25,7 @@ import { MarqueeDemo } from "@/components/custom/tech-marquee";
       <Text className="text-xl font-thin mt-8">Welcome to my portfolio</Text>
     </section>
 
-    <section
-      id="marquee-wrapper"
-      class="flex items-center max-w-2xl ml-21 mt-30"
-    >
+    <section id="marquee-wrapper" class="flex items-center max-w-2xl ml-21">
       <MarqueeDemo client:load />
     </section>
   </div>
