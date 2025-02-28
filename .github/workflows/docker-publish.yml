@@ -40,6 +40,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ~/docker/portfolio
-            docker compose pull
-            docker compose down --remove-orphans
-            docker compose up -d
+            drc pull
+            drc down --remove-orphans
+            drc up -d
