@@ -21,11 +21,11 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t your-dockerhub-username/your-repo-name:latest .
+          docker build -t andreo141/astro-portfolio:latest .
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push your-dockerhub-username/your-repo-name:latest
+          docker push andreo141/astro-portfolio:latest
 
   deploy:
     needs: build-and-push
