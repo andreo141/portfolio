@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import "@/styles/global.css";
 import { Text } from "@/components/ui/text";
 import { ClientRouter } from "astro:transitions";
-import { calculateYearsSinceStarted } from "@/utils/calculate-since";
+import { calculateYearsSinceStarted } from "@/utils/calculateSince";
 import ImageCard from "@/components/ui/image-card";
 import {
   Table,
@@ -90,15 +90,6 @@ const homeOfficeThings = [
           }
         </TableBody>
       </Table>
-    </div>
-    <div
-      id="about-image"
-      class="mb-21 opacity-0 animate-[fadeIn_1s_ease-in-out_forwards]"
-    >
-      <ImageCard
-        caption="Me when the summer hits again"
-        imageUrl="/images/cropped-andreo.jpg"
-      />
     </div>
   </div>
 </Layout>
