@@ -47,6 +47,11 @@ const technologies = [
     image: "/images/arduino.svg",
     site: "https://www.arduino.cc/",
   },
+  {
+    name: "C++",
+    image: "/images/c.svg",
+    site: "https://cplusplus.com/",
+  },
 ];
 
 const firstRow = technologies.slice(0, technologies.length / 2);
