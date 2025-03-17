@@ -14,29 +14,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-
-const homeOfficeThings = [
-  {
-    name: "Apple MacBook Air 13 inch (2024) M3 (8 core CPU/8 core GPU) 16GB/512GB Spacegray QWERTY",
-    link: "https://www.apple.com/benl/macbook-air/",
-  },
-  {
-    name: "Delonghi Dedica",
-    link: "https://www.delonghi.com/nl-be/handmatige-espressomachine-dedica-style-ec685-m/p/EC685.M",
-  },
-  {
-    name: "Ender-3 S1 Pro",
-    link: "https://store.creality.com/products/ender-3-s1-pro-3d-printer",
-  },
-  {
-    name: "Wanptek DC Bench Power Supply",
-    link: "https://www.wanptek.net/products/1994679",
-  },
-  {
-    name: "Andy Espresso Blend",
-    link: "https://andy-roasters.be/products/blend-espresso-1",
-  },
-];
 ---
 
 <Layout>
@@ -63,33 +40,6 @@ const homeOfficeThings = [
         looking for fresh new gems. I am currently working on adding a
         background radio, so i can share my findings through this portfolio.
       </Text>
-
-      <Text as="h3" className="text-4xl font-bold mt-21">Things I Own</Text>
-      <Table className="mt-8 max-w-4xl">
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[500px]">Cool thing</TableHead>
-            <TableHead>Get One Too</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {
-            homeOfficeThings.map((thing) => (
-              <TableRow key={thing.name}>
-                <TableCell className="font-base">{thing.name}</TableCell>
-                <TableCell>
-                  <a href={thing.link} target="_blank">
-                    {" "}
-                    <Button variant="neutral" className="cursor-pointer">
-                      <img src="/images/cart.svg" style="width: 20px;" alt="" />
-                    </Button>
-                  </a>
-                </TableCell>
-              </TableRow>
-            ))
-          }
-        </TableBody>
-      </Table>
     </div>
   </div>
 </Layout>
