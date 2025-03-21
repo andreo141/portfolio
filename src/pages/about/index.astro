@@ -4,20 +4,10 @@ import "@/styles/global.css";
 import { Text } from "@/components/ui/text";
 import { ClientRouter } from "astro:transitions";
 import { calculateYearsSinceStarted } from "@/utils/calculateSince";
-import ImageCard from "@/components/ui/image-card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
 ---
 
 <Layout>
-  <ClientRouter />
+  <ClientRouter client:load />
   <div
     id="about-wrapper"
     class="flex items-center justify-around ml-21 mr-21 mb-45"

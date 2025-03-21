@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 :root {
-  --main: #a3e636;
+  --main: #88aaee;
   --overlay: rgba(
     0,
     0,
@@ -14,7 +14,7 @@
     0.8
   ); /* background color overlay for alert dialogs, modals, etc. */
 
-  --bg: #e0e7f1;
+  --bg: #dfe5f2;
   --bw: #fff; /* white and secondary black e.g. utility class variant would be: bg-[#fff] dark:bg-[#212121] */
   --blank: #000; /* blank black and white */
   --border: #000;
@@ -23,7 +23,7 @@
   --ring: #000;
   --ring-offset: #fff;
 
-  --border-radius: 4px;
+  --border-radius: 14px;
   --box-shadow-x: 2px;
   --box-shadow-y: 3px;
   --reverse-box-shadow-x: -2px;
@@ -35,7 +35,7 @@
 }
 
 .dark {
-  --bg: #2c312b;
+  --bg: #272933;
   --bw: #212121;
   --blank: #fff;
   --border: #000;
