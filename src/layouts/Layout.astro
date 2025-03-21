@@ -1,6 +1,7 @@
 ---
 import Navbar from "@/components/custom/navbar.astro";
 import { Button } from "@/components/ui/button";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -13,6 +14,7 @@ import { Button } from "@/components/ui/button";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="generator" content={Astro.generator} />
     <title>Andreo Van Onckelen</title>
+    <ClientRouter />
   </head>
   <body>
     <header class="m-13">
@@ -57,9 +59,7 @@ import { Button } from "@/components/ui/button";
     </header>
     <Navbar />
     <slot />
-  </body>
-
-  <style>
+  </body><style>
     html,
     body {
       background-color: var(--bg);
