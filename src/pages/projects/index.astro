@@ -1,10 +1,38 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Text } from "../../components/ui/text";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@/components/ui/card";
+import ProjectImageCard from "@/components/custom/project-image-card";
 ---
 
 <Layout>
   <div class="flex items-center justify-center">
-    <Text as="h2" className="text-4xl font-bold ">Work in progress...</Text>
+    <Card className="w-full max-w-4xl pt-13 pb-13 pl-8 pr-8 rounded-xs">
+      <CardContent className="flex gap-13 items-center">
+        <ProjectImageCard imageUrl="/images/carbo.jpg" />
+        <div class="">
+          <CardTitle className="text-xl">Carbo</CardTitle>
+          <CardDescription className="text-lg mt-3">
+            Portable CO2 measuring device built using an ESP32 and a SCD41
+            sensor. Readings get sent via a NodeJS backend to an InfluxDB
+            instance hosted on my homeserver.
+            <br />
+            Duo project with <a
+              target="_blank"
+              href="https://github.com/wolfderechter">@wolfderechter</a
+            >
+          </CardDescription>
+          <a href="https://github.com/andreo141/carbo" target="_blank">
+            <Button className="rounded-xs cursor-pointer mt-5"> Github </Button>
+          </a>
+        </div>
+      </CardContent>
+    </Card>
   </div>
 </Layout>
