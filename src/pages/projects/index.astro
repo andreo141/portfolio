@@ -1,5 +1,5 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 import { Text } from "../../components/ui/text";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,7 +16,7 @@ import ProjectImageCard from "@/components/custom/project-image-card";
     <Card className="w-full max-w-4xl pt-13 pb-13 pl-8 pr-8 rounded-xs">
       <CardContent className="flex gap-13 items-center">
         <ProjectImageCard imageUrl="/images/carbo.jpg" />
-        <div class="">
+        <div>
           <CardTitle className="text-xl">Carbo</CardTitle>
           <CardDescription className="text-lg mt-3">
             Portable CO2 measuring device built using an ESP32 and a SCD41
@@ -28,9 +28,21 @@ import ProjectImageCard from "@/components/custom/project-image-card";
               href="https://github.com/wolfderechter">@wolfderechter</a
             >
           </CardDescription>
-          <a href="https://github.com/andreo141/carbo" target="_blank">
-            <Button className="rounded-xs cursor-pointer mt-5"> Github </Button>
-          </a>
+          <div class="flex gap-3">
+            <a href="https://github.com/andreo141/carbo" target="_blank">
+              <Button className="rounded-xs cursor-pointer mt-5">
+                Github
+              </Button>
+            </a>
+            <a href="/projects/carbo">
+              <Button
+                className="rounded-xs cursor-pointer mt-5"
+                variant="neutral"
+              >
+                Blog
+              </Button>
+            </a>
+          </div>
         </div>
       </CardContent>
     </Card>
