@@ -7,16 +7,17 @@ import { MarqueeDemo } from "@/components/custom/tech-marquee";
 <Layout>
   <div
     id="sections-wrapper"
-    class="flex items-center justify-around ml-21 mr-21"
+    class="md:flex text-center md:text-left
+ items-center justify-around ml-21 mr-21"
   >
-    <section id="introduction-section">
+    <section id="introduction-section" class="mb-21 md:mb-0">
       <Text className="text-xl font-thin ml-1">Hi there! My name is</Text>
       <Text as="h1" className="text-4xl font-bold mt-5"
         >Andreo Van Onckelen</Text
       >
       <Text
         as="h2"
-        className="text-2xl font-bold mt-5 underline underline-offset-13"
+        className="text-2xl font-bold mt-5 underline underline-offset-13 whitespace-nowrap"
         >Full Stack Developer</Text
       >
       <Text className="text-xl font-thin mt-8">Welcome to my portfolio</Text>

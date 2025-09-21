@@ -1,6 +1,6 @@
 type Props = {
   imageUrl: string;
-  caption: string;
+  caption?: string;
 };
 
 export default function ImageCard({ imageUrl, caption }: Props) {
